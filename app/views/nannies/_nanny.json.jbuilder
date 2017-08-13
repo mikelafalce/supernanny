@@ -1,0 +1,2 @@
+json.extract! nanny, :id, :first_name, :last_name, :email, :street_address, :address2, :city, :state, :zipcode, :time_at_cur_addre, :phone, :desired_hrs, :desired_territory, :desired_wage, :us_citizen, :work_permit, :gc_num, :yrs_in_usa, :have_dl, :dl_number, :dl_state, :yrs_driving, :own_car, :make_model, :use_for_work, :date_available, :sunday_avail, :monday_avail, :tuesday_avail, :wednesday_avail, :thursday_avail, :friday_avail, :saturday_avail, :one_year_min_commit, :created_at, :updated_at
+json.url nanny_url(nanny, format: :json)

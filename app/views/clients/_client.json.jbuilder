@@ -1,0 +1,2 @@
+json.extract! client, :id, :first_name, :last_name, :spouse_first_name, :email, :phone, :alt_phone, :street, :street2, :city, :state, :zip, :profession, :partner_profession, :needed_service, :num_of_kids, :names_and_ages_kids, :special_needs, :medical_condition, :pets, :pet_care, :family_schedule, :household_tasks, :fam_philosophy, :playdates, :created_at, :updated_at
+json.url client_url(client, format: :json)

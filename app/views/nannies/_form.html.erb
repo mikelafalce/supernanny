@@ -1,0 +1,187 @@
+<%= form_with(model: nanny, local: true) do |form| %>
+  <% if nanny.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(nanny.errors.count, "error") %> prohibited this nanny from being saved:</h2>
+
+      <ul>
+      <% nanny.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label>First Name</label>
+    <%= form.text_field :first_name, id: :nanny_first_name %>
+  </div>
+
+  <div class="field">
+    <label>Last Name</label>
+    <%= form.text_field :last_name, id: :nanny_last_name %>
+  </div>
+
+  <div class="field">
+    <label>Email</label>
+    <%= form.text_field :email, id: :nanny_email %>
+  </div>
+
+  <div class="field">
+    <label>Street Address</label>
+    <%= form.text_field :street_address, id: :nanny_street_address %>
+  </div>
+
+  <div class="field">
+    <label>Address 2</label> 
+    <%= form.text_field :address2, id: :nanny_address2 %>
+  </div>
+
+  <div class="field">
+    <label>City</label>  
+    <%= form.text_field :city, id: :nanny_city %>
+  </div>
+
+  <div class="field">
+    <label>State</label>
+    <%= form.text_field :state, id: :nanny_state %>
+  </div>
+
+  <div class="field">
+    <label>Zip</label>
+    <%= form.text_field :zipcode, id: :nanny_zipcode %>
+  </div>
+
+  <div class="field">
+    <label>Years at current address</label>
+    <%= form.text_field :time_at_cur_addre, id: :nanny_time_at_cur_addre %>
+  </div>
+
+  <div class="field">
+    <label>Phone</label>
+ <%= form.text_field :phone, id: :nanny_phone %>
+  </div>
+
+  <div class="field">
+    <label>Weekly hours desired</label>
+    <%= form.text_field :desired_hrs, id: :nanny_desired_hrs %>
+  </div>
+
+  <div class="field">
+    <label>Desired territory</label>
+    <%= form.text_field :desired_territory, id: :nanny_desired_territory %>
+  </div>
+
+  <div class="field">
+    <label>Desired hourly wage</label>
+    <%= form.text_field :desired_wage, id: :nanny_desired_wage %>
+  </div>
+
+  <div class="field">
+    <label>Do you require a visa to work legally in the United States?</label>
+    <%= form.text_field :us_citizen, id: :nanny_us_citizen %>
+  </div>
+
+  <div class="field">
+    <label>Work Permit number</label>
+    <%= form.text_field :work_permit, id: :nanny_work_permit %>
+  </div>
+
+  <div class="field">
+    <label>Green Card number</label>
+ <%= form.text_field :gc_num, id: :nanny_gc_num %>
+  </div>
+
+  <div class="field">
+    <label>How many years have you lived in the US?</label>
+    <%= form.text_field :yrs_in_usa, id: :nanny_yrs_in_usa %>
+  </div>
+
+  <div class="field">
+    <label>Do you have a driver's license?</label>
+    <%= form.text_field :have_dl, id: :nanny_have_dl %>
+  </div>
+
+  <div class="field">
+    <label>DL number</label>
+    <%= form.text_field :dl_number, id: :nanny_dl_number %>
+  </div>
+
+  <div class="field">
+    <label>DL State</label>
+    <%= form.text_field :dl_state, id: :nanny_dl_state %>
+  </div>
+
+  <div class="field">
+    <label>Number of years driving</label>
+    <%= form.text_field :yrs_driving, id: :nanny_yrs_driving %>
+  </div>
+
+  <div class="field">
+    <label>Do you own a car?</label>
+    <%= form.text_field :own_car, id: :nanny_own_car %>
+  </div>
+
+  <div class="field">
+    <label>Make, model</label>
+    <%= form.text_field :make_model, id: :nanny_make_model %>
+  </div>
+
+  <div class="field">
+    <label>Are you willing to use your vehicle for work?</label>
+    <%= form.text_field :use_for_work, id: :nanny_use_for_work %>
+  </div>
+<br>
+
+<div>
+    <h2>AVAILABILITY</h2>
+</div>
+
+  <div class="field">
+    <label>How soon are you available?</label>
+    <%= form.text_field :date_available, id: :nanny_date_available %>
+  </div>
+
+  <div class="field">
+    <label>Available to work Sundays?</label>
+    <%= form.text_field :sunday_avail, id: :nanny_sunday_avail %>
+  </div>
+
+  <div class="field">
+    <label>Available to work Mondays?</label>
+    <%= form.text_field :monday_avail, id: :nanny_monday_avail %>
+  </div>
+
+  <div class="field">
+    <label>Available to work Tuesdays?</label>
+    <%= form.text_field :tuesday_avail, id: :nanny_tuesday_avail %>
+  </div>
+
+  <div class="field">
+    <label>Available to work Wednesdays?</label>
+    <%= form.text_field :wednesday_avail, id: :nanny_wednesday_avail %>
+  </div>
+
+  <div class="field">
+    <label>Available to work Thursdays?</label>
+    <%= form.text_field :thursday_avail, id: :nanny_thursday_avail %>
+  </div>
+
+  <div class="field">
+    <label>Available to work Fridays?</label>
+    <%= form.text_field :friday_avail, id: :nanny_friday_avail %>
+  </div>
+
+  <div class="field">
+    <label>Available to work Saturdays?</label>
+    <%= form.text_field :saturday_avail, id: :nanny_saturday_avail %>
+  </div>
+
+  <div class="field">
+    <label>Are you able to agree to a minimum of one year commitment?</label>
+    <%= form.text_field :one_year_min_commit, id: :nanny_one_year_min_commit %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Submit Application" %>
+  </div>
+<% end %>

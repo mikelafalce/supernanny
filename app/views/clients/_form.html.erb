@@ -1,0 +1,157 @@
+
+
+<%= form_with(model: client, local: true) do |form| %>
+  <% if client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+      <ul>
+      <% client.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+  <div class="field">
+  
+  <label>First Name</label>  <%= form.text_field :first_name, id: :client_first_name %>
+  </div>
+
+  <div class="field">
+    
+  <label>Last Name</label>    <%= form.text_field :last_name, id: :client_last_name %>
+  </div>
+
+  <div class="field">
+    
+  <label>Spouse/Partner's First Name</label>    <%= form.text_field :spouse_first_name, id: :client_spouse_first_name %>
+  </div>
+
+  <div class="field">
+  
+  <label>Email</label>  <%= form.text_field :email, id: :client_email %>
+  </div>
+
+  <div class="field">
+    
+  <label>Phone</label>    <%= form.text_field :phone, id: :client_phone %>
+  </div>
+
+  <div class="field">
+    
+  <label>Alt Phone</label>    <%= form.text_field :alt_phone, id: :client_alt_phone %>
+  </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+  <div class="field">
+    
+  <label>Street Address</label>    <%= form.text_field :street, id: :client_street %>
+  </div>
+
+  <div class="field">
+    
+  <label>Street 2</label>    <%= form.text_field :street2, id: :client_street2 %>
+  </div>
+
+  <div class="field">
+     <label>City</label>
+    <%= form.text_field :city, id: :client_city %>
+  </div>
+
+  <div class="field">
+   
+ <label>State</label>   <%= form.text_field :state, id: :client_state %>
+  </div>
+
+  <div class="field">
+     <label>Zip Code</label>   
+    <%= form.text_field :zip, id: :client_zip %>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <div class="field">
+     <label>Your Profession</label>
+    <%= form.text_field :profession, id: :client_profession %>
+  </div>
+
+  <div class="field">
+     <label>Spouse/Partner's Profession</label>
+    <%= form.text_field :partner_profession, id: :client_partner_profession %>
+  </div>
+
+  <div class="field">
+     <label>Service Needed</label>
+    <%= form.text_field :needed_service, id: :client_needed_service %>
+  </div>
+
+  <div class="field">
+      <label>Number of children</label>    <%= form.text_field :num_of_kids, id: :client_num_of_kids %>
+  </div>
+
+  <div class="field">
+     <label>Names and ages of children</label>
+    <%= form.text_field :names_and_ages_kids, id: :client_names_and_ages_kids %>
+  </div>
+
+  <div class="field">
+     <label>Any special needs</label>
+    <%= form.text_field :special_needs, id: :client_special_needs %>
+  </div>
+
+  <div class="field">
+     <label>Any medical conditions</label>
+    <%= form.text_field :medical_condition, id: :client_medical_condition %>
+  </div>
+
+  <div class="field">
+     <label>Any pets in the home</label>
+    <%= form.text_field :pets, id: :client_pets %>
+  </div>
+
+  <div class="field">
+     <label>Any pet care expected of nanny?</label>
+    <%= form.text_field :pet_care, id: :client_pet_care %>
+  </div>
+
+  <div class="field">
+     <label>Any family schedule info to share</label>
+    <%= form.text_field :family_schedule, id: :client_family_schedule %>
+  </div>
+
+  <div class="field">
+     <label>Any household tasks</label>
+    <%= form.text_field :household_tasks, id: :client_household_tasks %>
+  </div>
+
+  <div class="field">
+     <label>Any family philosophy to share</label>
+    <%= form.text_field :fam_philosophy, id: :client_fam_philosophy %>
+  </div>
+
+  <div class="field">
+     <label>Would you like to have playdates</label>
+    <%= form.text_field :playdates, id: :client_playdates %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Create Family Profile"%>
+  </div>
+<% end %>
