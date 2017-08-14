@@ -23,20 +23,29 @@
     <% end %>
 
     <nav class="navbar navbar-default">
-      <h5><a href="/">Super Nanny Agency</a></h5>
+      <h5><a style='color:#f0bfff' href="/">Super Nanny Agency</a></h5>
     
-    <p class="navbar-text pull-right">
-    <% if admin_signed_in? %>
-      Logged in as <strong><%= current_admin.email %></strong>.
-      <%= link_to 'Dashboard', admin_path, :class => 'navbar-link' %> |
-      <%= link_to "Logout", destroy_admin_session_path, method: :delete, :class => 'navbar-link'  %>
-    <% else %>
-      <%= link_to "Admin", new_admin_session_path, :class => 'navbar-link'  %>
-    <% end %>
-    </p>
+      <p class="navbar-text pull-right">
+      <% if admin_signed_in? %>
+        Logged in as <strong><%= current_admin.email %></strong>. 
+        <%= link_to 'Dashboard', admin_path, :class => 'navbar-link' %> |
+        <%= link_to "Logout", destroy_admin_session_path, method: :delete, :class => 'navbar-link'  %>
+      <% else %>
+        <%= link_to "Admin", new_admin_session_path, :class => 'navbar-link'  %>
+      <% end %>
+      </p>
     </nav
 
 
     <%= yield %>
+
   </body>
+  <footer>
+    <br>
+    
+    <div align='center'>Super Nanny Agency | t: 773-818-8556 | e: walladap@gmail.com</div>
+    <br>
+    <br>  
+    <br>
+  </footer>
 </html>
